@@ -9,7 +9,7 @@
   "types": "dist/custom-elements/index.d.ts",
   "collection": "dist/collection/collection-manifest.json",
   "collection:main": "dist/collection/index.js",
-  "unpkg": "dist/stencil-react-exp/stencil-react-exp.js",
+  "unpkg": "dist/stencil-example/stencil-example.js",
   "files": [
     "dist/",
     "loader/"
