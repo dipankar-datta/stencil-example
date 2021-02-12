@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0" />
+    <title>Stencil Component Starter</title>
+
+    <script type="module" src="/build/stencil-react-exp.esm.js"></script>
+    <script nomodule src="/build/stencil-react-exp.js"></script>
+
+
+    <script>
+
+      attachEvents = () => {
+        const filterDOM = document.querySelector("filter-component");
+        filterDOM.addEventListener("filterChange", event => {
+          console.log(event.detail);
+
+          applyPieChartFilter(event.detail);
+          applyColumnChartFilter(event.detail);
+          applyTableFilter(event.detail)
+        });
+      }      
+
+
+      applyPieChartFilter = (filter) => {
+        const pieChartDOM = document.querySelector("pie-chart-example");
+        pieChartDOM.setAttribute('country', filter.country);
+        pieChartDOM.setAttribute('year', filter.year);
+      }
+      
+      applyColumnChartFilter = (filter) => {
+        const columnChartDOM = document.querySelector("column-chart-example");
+        columnChartDOM.setAttribute('country', filter.country);
+        columnChartDOM.setAttribute('year', filter.year);
+      }
+
+      applyTableFilter = (filter) => {        
+        const tableDOM = document.querySelector("table-example");
+        tableDOM.setAttribute('country', filter.country);
+        tableDOM.setAttribute('year', filter.year);
+      }
+     
+
+    </script>
+
+
+  </head>
+  <body onload="attachEvents();">
+
+    <h2>Olympic Dashboard</h2>
+    
+    <div style="max-width: 50%;">
+      <filter-component ></filter-component>
+    </div>
+
+    <div style="display: flex;">
+      <span><column-chart-example></column-chart-example></span>
+      <span><pie-chart-example></pie-chart-example></span>
+    </div>  
+    <div style="display: flex;">
+      <span style="max-height: 550px; overflow: auto"><table-example></table-example></span>
+    </div>    
+  </body>
+</html>
