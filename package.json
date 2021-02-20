@@ -16,7 +16,7 @@
   ],
   "scripts": {
     "build": "stencil build --docs",
-    "start": "npm install && stencil build && rm -r node_modules && rm -r dist && cd www && npx serve",
+    "start": "npm install && stencil build && rm -r node_modules && rm -r dist && cd www && npx serve --cors='*'",
     "test": "stencil test --spec --e2e",
     "test.watch": "stencil test --spec --e2e --watchAll",
     "generate": "stencil generate"
