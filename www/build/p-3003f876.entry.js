@@ -1,0 +1,1 @@
+import{r as t,h as s}from"./p-395d32c6.js";const r=class{constructor(s){t(this,s),this.mountPoint=document.createElement("span")}getText(){return(this.first||"")+((t=this.middle)?" "+t:"")+((s=this.last)?" "+s:"");var t,s}render(){return s("div",null,"Hello, World! I'm ",this.getText())}};r.style=":host{display:block}";export{r as my_component}

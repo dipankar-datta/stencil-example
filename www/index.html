@@ -1,4 +1,4 @@
-<!doctype html><html dir="ltr" lang="en"><head> <meta charset="utf-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0"> <title>Stencil Component Starter</title> <script type="module" src="/build/stencil-example.esm.js" data-stencil></script> <script nomodule="" src="/build/stencil-example.js" data-stencil></script> <script>attachEvents = () => {
+<!doctype html><html dir="ltr" lang="en"><head> <meta charset="utf-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0"> <title>Stencil Component Starter</title> <script type="module" src="/build/stencil-example.esm.js" data-stencil data-resources-url="/build/" data-stencil-namespace="stencil-example"></script> <script nomodule="" src="/build/stencil-example.js" data-stencil></script> <script>attachEvents = () => {
         const filterDOM = document.querySelector("filter-component");
         filterDOM.addEventListener("filterChange", event => {
           console.log(event.detail);
@@ -26,11 +26,4 @@
         const tableDOM = document.querySelector("table-example");
         tableDOM.setAttribute('country', filter.country);
         tableDOM.setAttribute('year', filter.year);
-      }</script> </head> <body onload="attachEvents();"> <h2>Olympic Dashboard</h2> <div style="max-width: 50%;"> <filter-component></filter-component> </div> <div style="display: flex;"> <span><column-chart-example></column-chart-example></span> <span><pie-chart-example></pie-chart-example></span> </div> <div style="display: flex;"> <span style="max-height: 550px; overflow: auto;"><table-example></table-example></span> </div> <script>if ('serviceWorker' in navigator && location.protocol !== 'file:') {
-  // auto-unregister service worker during dev mode
-  navigator.serviceWorker.getRegistration().then(function(registration) {
-  if (registration) {
-    registration.unregister().then(function() { location.reload(true) });
-  }
-  });
-}</script></body></html>
+      }</script> </head> <body onload="attachEvents();"> <h2>Olympic Dashboard</h2> <div style="max-width: 50%;"> <filter-component></filter-component> </div> <div style="display: flex;"> <span><column-chart-example></column-chart-example></span> <span><pie-chart-example></pie-chart-example></span> </div> <div style="display: flex;"> <span style="max-height: 550px; overflow: auto;"><table-example></table-example></span> </div> </body></html>
